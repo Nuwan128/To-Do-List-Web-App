@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    
+    
+    <!-- container -->
+    <div id="to-do">
+        <div class="logo">
+            <h2>TO DO List</h2>
+        </div>
+        <!-- form -->
+        <div id="frm-div">
+            <form id="frm">
+            <input type="text" id="to-do-content" placeholder="Add new Todo..." required>
+            <button id="btn"><ion-icon name="add-outline"></ion-icon></button>
+        </form>
+        </div>
+
+        <!-- display details -->
+        <div id="display-div">
+            <h2>Todo's</h2>
+            <p>3 total, 2 complete and 1 pending</p>
+        </div>
+
+        <!-- table -->
+        <div id="tbl-div" class="table">
+            <table id="items">
+                <tr>
+                    <th>#</th>
+                    <th>Todo Title</th>
+                    <th>Status</th>   
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Eat Lunch</td>
+                    <td>complete</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="title">sleep</td>
+                    <td class="status">complete</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="title">Time to sleep </td>
+                    <td class="status">pending</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
+
