@@ -4,7 +4,8 @@
 /* heder = rgba(61,57,170,255); */
 :root{
     --shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
-    
+    --blue:rgba(61,57,170,255);
+    --green:rgba(188,255,183,255);
 }
 
 *{
@@ -23,13 +24,13 @@ body{
     
 }
 #to-do{
-    /* margin: ; */
+    
     display: flex;
     flex-direction: column;
     justify-content: center; 
     height: 500px;
     width: 500px;
-    /* background: rgb(109, 103, 103); */
+    
     
     
 }
@@ -40,7 +41,7 @@ body{
     background: rgb(255, 255, 255,0.5);
     width: 100%;
     padding: 5px;
-    color: rgb(11, 13, 78);
+    color:var(--blue);
     /* box-shadow: var(--shadow); */
     border: 5px rgb(40, 7, 7);
     border-radius: 5px;
@@ -67,17 +68,16 @@ body{
     box-shadow: var(--shadow);
 }
 
-#frm-div #frm #btn{
+.btn{
     padding: 5px;
     font-size: 13px;
-    
-    background: rgb(11, 13, 78);
+    background: var(--blue);
     color: white;
     border: none;
     border-radius: 5px;
     box-shadow: var(--shadow);
 }
-#frm-div #frm #btn:hover{
+.btn:hover{
     
     transform:scale(1.1) ;
 }
@@ -87,12 +87,13 @@ body{
     box-shadow: var(--shadow);
     border-radius: 5px;
     padding: 20px;
+    
 }
 
 #display-div h2{
-    color: rgb(11, 13, 78);
-    /* text-shadow:3px 3px 30px black; */
+    color:var(--blue);
     letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
 #display-div #tbl-div {
@@ -108,17 +109,14 @@ body{
     margin: 0;
     width: 100%;
     background:#fff;
-    /* -moz-border-radius: 5px !important; */
-    border-collapse: collapse !important;
-    border: none !important;
+    border-collapse: collapse ;
+    border: none ;
     border-radius: 10px;
     overflow: hidden;
 
 }
 
-#display-div #tbl-div #items.roumded-corners{
 
-}
 
 #items tr th{
     background: rgba(61,57,170,255);
@@ -137,4 +135,25 @@ body{
 }
 #items tr td:first-child{
     text-align: center;
+}
+
+#display-div #clear{
+    margin: 10px auto;
+    padding: 5px;
+    width: 80px;
+    
+}
+
+#clear-btn{
+    text-align: center;
+}
+
+@media(max-width:500px){
+    #to-do{
+        width: 80%;
+    }
+    #frm-div #frm #to-do-content{
+        width:90%;
+    }
+
 }
